@@ -24,7 +24,7 @@
 			load(bib_book, jang, jeul);
 			// Set current button disable
 			initJangButton(jang, true);
-			jang = setBottomButton(jang, "${tot_jang}");
+			jang = setBottomButton(jang, ${ tot_jang });
 			$("#curr_jang").val(jang); // Set current jang
 			$("#btnProject").click(function () {
 				location.href = "${path}/first/project.do";
@@ -35,7 +35,7 @@
 
 				jeul = view($("#viewJeul").val(), false);
 				// Check the bottom button was clicked
-				jang = setBottomButton(e.target.id, "${tot_jang}");
+				jang = setBottomButton(e.target.id, ${ tot_jang });
 				//jang = e.target.id;
 				$("#curr_jang").val(jang); // Set current jang
 				// Set current button disable
@@ -94,7 +94,7 @@
 				}
 			}
 			else if (id == "btnRbottom") {
-				if ($("#curr_jang").val() < "${tot_jang}") {
+				if ($("#curr_jang").val() < ${ tot_jang }) {
 					jang = curr_j + 1;
 				}
 			}
